@@ -1,5 +1,8 @@
+// PROFILE ROUTE
+// Can have any number as id.
+// This will GET the user for their homepage.
 const handleProfileGet = (req, res, db) => {
-	const { id } = req.params;
+	const { id } = req.params; // <- gets the id
 	db
 		.select('*')
 		.from('users')
