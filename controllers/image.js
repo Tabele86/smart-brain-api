@@ -6,8 +6,8 @@ const Clarifai = require('clarifai');
 // API KEY
 //You must add your own API key here from Clarifai.
 const app = new Clarifai.App({
-	apiKey: '41679de35aea4cfb82c9f8129778126d'
-	// apiKey: process.env.API_KEY //add your own .env file
+	// apiKey: '41679de35aea4cfb82c9f8129778126d'
+	apiKey: process.env.API_KEY //add your own .env file
 });
 
 // Clarifai's face detection magic
