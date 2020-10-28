@@ -37,9 +37,7 @@ app.get('/', (req, res) => {
 // SIGNIN ROUTE (more comments in controllers)
 // In here we're doing a dependency injection ie. injecting the dependencies
 // that the handleRegister function needs like the knex database and bcrypt.
-app.post('/signin', (req, res) => {
-	signin.handleSignin(req, res, db, bcrypt);
-});
+app.post('/signin', signin.handleSignin(db, bcrypt));
 // a bit more advanced way is used here - the other routes could be changed to similar syntax depending on preference
 
 // REGISTER ROUTE
